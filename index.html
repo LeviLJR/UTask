@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>uTask 3.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="logo">
+          <a href="#home"><img id="logo-img" src="./library/logo.svg" /></a>
+        </div>
+        <div id="title">uTask 3.0</div>
+        <button id="switch">
+          <img id="switch-img" src="./library/light_mode.svg" />
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="frase">
+        <img id="tips" src="./library/tips_and_updates.svg" />
+        <div>
+          <h4>Frase do dia</h4>
+          <p>
+            Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você
+            quer conquistar o mundo, acredite em você porque Deus já te deu tudo
+            o que você precisa para você vencer.
+          </p>
+        </div>
+      </div>
+      <div class="processos">
+        <div>
+          <div class="adicionar">
+            A fazer
+            <button onclick="Modal.open()">
+              <img src="./library/add.svg" />
+            </button>
+          </div>
+          <div id="fazer" class="carrossel">
+            <!-- <div class="atividades">
+              <div class="atividades-tarefa">
+                <h4>Pagar conta de luz</h4>
+                <button>
+                  <img width="16px" src="./library/more_vert.svg" />
+                </button>
+              </div>
+              <div class="atividades-descrição">
+                <button id="ler-descrição">
+                  <div>Ler descrição</div>
+                  <img width="12px" src="./library/expand_more.svg" />
+                </button>
+              </div>
+              <div class="descrição-vira">
+                <div class="descrição">
+                  Comprar batata, cenoura, feijão, alho, arroz e pipoca.
+                </div>
+                <div class="vira-lado">
+                  <button class="vira-direita">
+                    <img width="16px" src="./library/expand_next.svg" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="atividades">
+              <div class="atividades-tarefa">
+                <h4>Pagar conta de luz</h4>
+                <button>
+                  <img width="16px" src="./library/more_vert.svg" />
+                </button>
+              </div>
+              <div class="atividades-descrição">
+                <button id="ler-descrição">
+                  <div>Ler descrição</div>
+                  <img width="12px" src="./library/expand_more.svg" />
+                </button>
+                <button class="botão-excluir">
+                  <img width="16px" src="./library/delete_outline.svg" />
+                  <p>Excluir</p>
+                </button>
+              </div>
+              <div class="descrição">
+                Comprar batata, cenoura, feijão, alho, arroz e pipoca.
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div>
+          <div class="adicionar">Em andamento</div>
+          <div id="andamento" class="carrossel">
+            <!-- <div class="atividades">
+              <div class="atividades-tarefa">
+                <h4>Fazer manicure</h4>
+                <button>
+                  <img width="16px" src="./library/more_vert.svg" />
+                </button>
+              </div>
+              <div class="atividades-descrição">
+                <button id="ler-descrição">
+                  <div>Ler descrição</div>
+                  <img width="12px" src="./library/expand_more.svg" />
+                </button>
+                <div class="vira-lado">
+                  <button class="vira-esquerda">
+                    <img width="16px" src="./library/navigate_before.svg" />
+                  </button>
+                  <button class="vira-direita">
+                    <img width="16px" src="./library/expand_next.svg" />
+                  </button>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div>
+          <div class="adicionar">Feito</div>
+          <div id="feito" class="carrossel">
+            <!-- <div class="atividades">
+              <div class="atividades-tarefa">
+                <h4>Fazer manicure</h4>
+                <button>
+                  <img width="16px" src="./library/more_vert.svg" />
+                </button>
+              </div>
+              <div class="atividades-descrição">
+                <button id="ler-descrição">
+                  <div>Ler descrição</div>
+                  <img width="12px" src="./library/expand_more.svg" />
+                </button>
+                <div class="vira-lado">
+                  <button class="vira-esquerda">
+                    <img width="16px" src="./library/navigate_before.svg" />
+                  </button>
+                  <button class="replay">
+                    <img width="16px" src="./library/replay.svg" />
+                  </button>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <div id="form">
+          <div class="title-new-task">
+            <div></div>
+            <div>
+              <h2>Nova Task</h2>
+              <div
+                style="
+                  width: 121px;
+                  height: 3px;
+                  left: 603px;
+                  top: 210px;
+                  background: #226ed8;
+                  border-radius: 10px;
+                "
+              ></div>
+            </div>
+            <a onclick="Modal.close()" href="#" class="button cancel">
+              <img src="./library/close.svg" alt="" />
+            </a>
+          </div>
+          <form action="" onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <label class="sr-only" for="title">Titulo *</label>
+              <input type="text" id="title" name="title" placeholder="Título" />
+            </div>
+            <div class="input-group">
+              <label class="sr-only" for="description"> Descrição </label>
+              <textarea
+                id="description"
+                name="descrição"
+                placeholder="Escreva algo aqui"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="input-group actions">
+              <button onclick="Modal.open()">Criar Task</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        <a class="unect-carimbo">
+          © Processo de Trainee &nbsp
+          <h4>Unect Jr.</h4>
+          &nbsp 2022.1
+        </a>
+        <a>Feito com <img src="./library/favorite.svg" /> por Levi</a>
+      </div>
+    </footer>
+    <script src="./classes/switch.js"></script>
+    <script src="./classes/refresh.js"></script>
+    <script src="./classes/modal.js"></script>
+    <script src="./classes/storage.js"></script>
+    <script src="./classes/task.js"></script>
+    <script src="./classes/dom.js"></script>
+    <script src="./classes/dom2.js"></script>
+    <script src="./classes/dom3.js"></script>
+    <script src="./classes/form.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
