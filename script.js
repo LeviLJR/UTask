@@ -1,15 +1,15 @@
 const App = {
   init() {
     Switch();
-
-    if (Task.all.length) {
-      Task.all.forEach(DOM.addTask);
-    }
-    Storage.set(Task.all);
+    DOM.generateTasks();
+    DOM2.generateTasks();
+    DOM3.generateTasks();
   },
 
   reload() {
     DOM.clearTasks();
+    DOM2.clearTasks();
+    DOM3.clearTasks();
     App.init();
   },
 };

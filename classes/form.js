@@ -40,7 +40,8 @@ const Form = {
       const task = Form.formatValues();
       // Form.formatData()
       // salvar
-      Task.add(task);
+
+      DOM.add(task);
       // apagar os dados do formulário
       Form.clearFields();
       // modal feche

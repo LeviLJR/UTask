@@ -49,7 +49,7 @@
 
 body {
   font-weight: 400;
-  background-color: var(--white);
+  background-color: var(--white2);
   color: var(--black);
   font-family: "Poppins", sans-serif;
   display: flex;
@@ -157,7 +157,7 @@ main {
   overflow: auto;
   display: flex;
   margin-left: 119px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 
@@ -270,6 +270,16 @@ main {
   line-height: 18px;
 }
 
+.icon {
+  color: var(--black);
+  fill: currentColor;
+}
+
+.icon-delete {
+  color: var(--red);
+  fill: currentColor;
+}
+
 #ler-descrição {
   margin-left: 2px;
   height: 18px;
@@ -291,6 +301,17 @@ main {
 }
 
 .atividades-descrição .botão-excluir {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+}
+
+.botão-excluir p {
+  margin-left: 4px;
+}
+
+.atividades-descrição .botão-excluir.active {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,6 +322,16 @@ main {
 
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+
+  opacity: 1;
+  position: relative;
+  visibility: visible;
 }
 
 .descrição-vira {
@@ -308,22 +339,49 @@ main {
   align-items: start;
   flex-direction: column;
   justify-content: start;
-  margin-right: 12px;
 }
 
-#descrição {
+.descrição {
   font-weight: 400;
   width: 163px;
   margin-top: 8px;
   font-size: 12px;
   line-height: 18px;
   word-wrap: break-word;
+
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+}
+
+.descrição.active {
+  opacity: 1;
+  position: relative;
+  visibility: visible;
 }
 
 .vira-lado {
   margin-right: 4px;
   display: flex;
   align-items: end;
+}
+
+.vira-lado.active {
+  margin-right: 4px;
+  display: flex;
+  align-items: end;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+}
+
+.vira-esquerda {
+  margin-right: 4px;
+  opacity: 1;
+  position: relative;
+  visibility: visible;
 }
 
 /*
@@ -502,16 +560,20 @@ footer img {
 
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: var(--black);
+  nav {
+    margin-inline: 21px;
   }
 
   .frase {
-    background-color: #226ED8;
+    background-color: var(--yellow);
+    margin-inline: 44px;
+    min-width: 180px;
+    width: auto;
   }
 
   .processos {
     margin-bottom: 10px;
+    margin-left: 0px;
   }
 
 }

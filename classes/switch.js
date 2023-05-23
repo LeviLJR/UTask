@@ -1,6 +1,4 @@
 function Switch() {
-  localStorage.setItem("mode", "light");
-
   const botao = document.querySelector("#switch");
   botao.addEventListener("click", Refresh);
 
@@ -9,17 +7,17 @@ function Switch() {
   const imgLogo = document.getElementById("logo-img");
   const imgFrase = document.getElementById("tips");
 
-  const mode = localStorage.getItem("mode");
+  const mode = localStorage.getItem("mode") || "light";
   body.className = mode;
 
   img.src =
-    mode === "dark" ? "./library/dark_mode.svg" : "./library/light_mode.svg";
+    mode === "light" ? "./library/light_mode.svg" : "./library/dark_mode.svg";
   imgLogo.src =
-    mode === "dark" ? "./library/logo_dark.svg" : "./library/logo.svg";
+    mode === "light" ? "./library/logo.svg" : "./library/logo_dark.svg";
   imgFrase.src =
-    mode === "dark"
-      ? "./library/tips_dark.svg"
-      : "./library/tips_and_updates.svg";
+    mode === "light"
+      ? "./library/tips_and_updates.svg"
+      : "./library/tips_dark.svg";
 
   botao.style.justifyContent =
     mode === "light"
