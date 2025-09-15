@@ -27,26 +27,26 @@
     </header>
 
     <main>
-      <div class="frase">
+      <div class="phrase">
         <img id="tips" src="./library/tips_and_updates.svg" />
         <div>
-          <h4>Frase do dia</h4>
+          <h4>Phrase of the day</h4>
           <p>
-            Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você
-            quer conquistar o mundo, acredite em você porque Deus já te deu tudo
-            o que você precisa para você vencer.
+            If you want a little piece of heaven, believe in God. But if you
+            want to conquer the world, believe in yourself because God has already given you everything
+            you need to succeed.
           </p>
         </div>
       </div>
-      <div class="processos">
+      <div class="container">
         <div>
-          <div class="adicionar">
-            A fazer
+          <div class="heading-cards">
+            To do
             <button onclick="Modal.open()">
               <img src="./library/add.svg" />
             </button>
           </div>
-          <div id="fazer" class="carrossel">
+          <div id="toDoTasks" class="carrousel">
             <!-- <div class="atividades">
               <div class="atividades-tarefa">
                 <h4>Pagar conta de luz</h4>
@@ -95,8 +95,8 @@
           </div>
         </div>
         <div>
-          <div class="adicionar">Em andamento</div>
-          <div id="andamento" class="carrossel">
+          <div class="heading-cards">In progress</div>
+          <div id="progressTasks" class="carrousel">
             <!-- <div class="atividades">
               <div class="atividades-tarefa">
                 <h4>Fazer manicure</h4>
@@ -122,8 +122,8 @@
           </div>
         </div>
         <div>
-          <div class="adicionar">Feito</div>
-          <div id="feito" class="carrossel">
+          <div class="heading-cards">Done</div>
+          <div id="doneTasks" class="carrousel">
             <!-- <div class="atividades">
               <div class="atividades-tarefa">
                 <h4>Fazer manicure</h4>
@@ -157,7 +157,7 @@
           <div class="title-new-task">
             <div></div>
             <div>
-              <h2>Nova Task</h2>
+              <h2>New task</h2>
               <div
                 style="
                   width: 121px;
@@ -175,20 +175,20 @@
           </div>
           <form action="" onsubmit="Form.submit(event)">
             <div class="input-group">
-              <label class="sr-only" for="title">Titulo *</label>
-              <input type="text" id="title" name="title" placeholder="Título" />
+              <label class="sr-only" for="title">Title *</label>
+              <input type="text" id="title" name="title" placeholder="Title" />
             </div>
             <div class="input-group">
-              <label class="sr-only" for="description"> Descrição </label>
+              <label class="sr-only" for="description"> Description </label>
               <textarea
                 id="description"
-                name="descrição"
-                placeholder="Escreva algo aqui"
+                name="description"
+                placeholder="Write something here"
                 rows="5"
               ></textarea>
             </div>
             <div class="input-group actions">
-              <button onclick="Modal.open()">Criar Task</button>
+              <button onclick="Modal.open()">Create task</button>
             </div>
           </form>
         </div>
@@ -197,21 +197,21 @@
 
     <footer>
       <div>
-        <a class="unect-carimbo">
-          © Processo de Trainee &nbsp
+        <a class="unect-footer">
+          © Trainee Program &nbsp
           <h4>Unect Jr.</h4>
           &nbsp 2022.1
         </a>
-        <a>Feito com <img src="./library/favorite.svg" /> por Levi</a>
+        <a>Made with<img src="./library/favorite.svg" /> by Levi</a>
       </div>
     </footer>
     <script src="./classes/switch.js"></script>
     <script src="./classes/refresh.js"></script>
     <script src="./classes/modal.js"></script>
     <script src="./classes/storage.js"></script>
-    <script src="./classes/dom.js"></script>
-    <script src="./classes/dom2.js"></script>
-    <script src="./classes/dom3.js"></script>
+    <script src="./classes/toDoTasks.js"></script>
+    <script src="./classes/progressTasks.js"></script>
+    <script src="./classes/doneTasks.js"></script>
     <script src="./classes/form.js"></script>
     <script src="script.js"></script>
   </body>

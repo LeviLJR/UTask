@@ -13,7 +13,7 @@ const Form = {
     const { title, description } = Form.getValues();
 
     if (title.trim() === "" || description.trim() === "") {
-      throw new Error("Por favor, preencha todos os campos");
+      throw new Error("Please fill all the fields");
     }
   },
 
@@ -41,7 +41,7 @@ const Form = {
       // Form.formatData()
       // salvar
 
-      DOM.add(task);
+      toDoTasks.add(task);
       // apagar os dados do formulário
       Form.clearFields();
       // modal feche
